@@ -21,3 +21,5 @@ SHOW VARIABLES LIKE '%log%';
 -- Clean the "general_log" table when you're finished debugging
 TRUNCATE TABLE `mysql`.`general_log`;
 TRUNCATE `mysql`.`general_log`;
+DELETE FROM `mysql`.`general_log` WHERE TRUE;
+DELETE FROM `mysql`.`general_log` WHERE 1;
