@@ -24,8 +24,8 @@ TRUNCATE `mysql`.`general_log`;
 DELETE FROM `mysql`.`general_log` WHERE TRUE;
 DELETE FROM `mysql`.`general_log` WHERE 1;
 --Or much better way
-SET GLOBAL `mysql.general_log` = 'OFF';
+SET GLOBAL `general_log` = 'OFF';
 RENAME TABLE `mysql.general_log` TO `mysql.general_log_temp`;
 DELETE FROM `mysql.general_log_temp` WHERE `event_time` < DATE(NOW());
 RENAME TABLE `mysql.general_log_temp` TO `mysql.general_log`;
-SET GLOBAL `mysql.general_log` = 'ON';
+SET GLOBAL `general_log` = 'ON';
