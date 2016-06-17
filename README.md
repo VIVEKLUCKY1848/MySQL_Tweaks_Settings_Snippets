@@ -1,0 +1,1 @@
+# MySQL_Tweaks_Settings_Snippets.sql
