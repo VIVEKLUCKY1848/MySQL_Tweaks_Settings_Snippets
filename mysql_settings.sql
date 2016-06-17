@@ -16,3 +16,8 @@ SET GLOBAL general_log = 1;
 
 -- Display all variables having "log" word in their names
 SHOW VARIABLES LIKE '%log%';
+
+
+-- Clean the "general_log" table when you're finished debugging
+TRUNCATE TABLE `mysql`.`general_log`;
+TRUNCATE `mysql`.`general_log`;
