@@ -12,3 +12,7 @@ SET GLOBAL log_output = 'FILE';
 SET GLOBAL general_log_file='<path_to_file.log>';
 SET GLOBAL general_log_file='C:\wamp\www\magento1924';
 SET GLOBAL general_log = 1;
+
+
+-- Display all variables having "log" word in their names
+SHOW VARIABLES LIKE '%log%';
