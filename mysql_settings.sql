@@ -30,6 +30,7 @@ DELETE FROM `mysql.general_log_temp` WHERE `event_time` < DATE(NOW());
 RENAME TABLE `mysql.general_log_temp` TO `mysql.general_log`;
 SET GLOBAL `general_log` = 'ON';
 
+
 -- Show create table query for any table
 SHOW CREATE TABLE `<database_name>`.`<table_name>`;
 -- examples
