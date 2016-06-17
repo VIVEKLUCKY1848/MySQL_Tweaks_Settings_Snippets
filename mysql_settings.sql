@@ -36,3 +36,23 @@ SHOW CREATE TABLE `<database_name>`.`<table_name>`;
 -- examples
 SHOW CREATE TABLE `mysql`.`general_log`;
 SHOW CREATE TABLE `general_log`;
+
+
+-- Create table "general_log" inside "mysql" database
+CREATE TABLE `general_log` (
+ `event_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ `user_host` mediumtext NOT NULL,
+ `thread_id` bigint(21) unsigned NOT NULL,
+ `server_id` int(10) unsigned NOT NULL,
+ `command_type` varchar(64) NOT NULL,
+ `argument` mediumtext NOT NULL
+) ENGINE=CSV DEFAULT CHARSET=utf8 COMMENT='General log'
+-- Or
+CREATE TABLE `mysql`.`general_log` (
+ `event_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ `user_host` mediumtext NOT NULL,
+ `thread_id` bigint(21) unsigned NOT NULL,
+ `server_id` int(10) unsigned NOT NULL,
+ `command_type` varchar(64) NOT NULL,
+ `argument` mediumtext NOT NULL
+) ENGINE=CSV DEFAULT CHARSET=utf8 COMMENT='General log'
